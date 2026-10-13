@@ -1,0 +1,77 @@
+/* ---------- Home page (#home-page) ---------- */
+#home-page {
+  display: grid;
+  gap: 56px;
+}
+
+#home-page .home-hero {
+  position: relative;
+}
+#home-page .home-hero::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  z-index: -1;
+  width: min(320px, 50vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgb(255 92 53 / 0.25), transparent 70%);
+  filter: blur(8px);
+}
+
+#home-page .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+#home-page .eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background: var(--accent);
+}
+
+#home-page .button {
+  border-radius: 99px;
+  padding: 14px 24px;
+  font-weight: 700;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+#home-page .button:hover {
+  transform: translateY(-2px);
+}
+
+#home-page .cards {
+  margin-top: 0;
+  max-width: none;
+}
+#home-page .cards article {
+  position: relative;
+  border-radius: 16px;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s;
+}
+#home-page .cards article:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 16px 32px rgb(23 33 43 / 0.1);
+}
+#home-page .card-num {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--accent);
+  font: 700 0.8rem/1 Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 880px) {
+  #home-page {
+    gap: 36px;
+  }
+}

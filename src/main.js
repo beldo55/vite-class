@@ -1,4 +1,4 @@
-import home from './pages/home.js';
+import home ,{enter} from './pages/home.js';
 import about from './pages/about.js';
 import services from './pages/services.js';
 import work from './pages/work.js';
@@ -34,6 +34,8 @@ function showPage() {
     app.innerHTML = privacy;
   } else {
     app.innerHTML = home;
+    enter()
+
   }
 
   document.querySelectorAll('.site-nav a').forEach((link) => {
